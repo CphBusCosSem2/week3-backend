@@ -1,10 +1,11 @@
-# Week 3 Java Servlets, JSP, JDBC
-- 3 days of class session and daily exercises
-- 2 days of miniproject recapping the learning objectives from the last 3 weeks
+# ![](img/lotussm.png)  Week 3:  Java Servlets, JSP, JDBC  
+3 days of class session and daily exercises  
+2 days of miniproject recapping the learning objectives from the last 3 weeks
 
 
 
 ## Day 1 - Java Servlets
+![alt text](img/clientServer.png "client server image")  
 - The architecture (client server with HTTP, POST and GET)
   - Look at dev. tools. i chrome to see what is communicated between client and Server.
 - The anatomy of a java servlet
@@ -32,16 +33,11 @@ Create an application that can register recipes from users
 
 
 ## Day 2 - JSP (Java Server Pages)
+![](img/clientServer.png)
 - Architecture
   - Page Controller vs. Front Controller
 - Setup a front controller example
   - use `<hidden>` form fields to communicate origin.
-- 
-- 
-- 
-- 
-- 
-- 
 - 
 
 
@@ -65,9 +61,7 @@ Continue from the exercise yesterday.
 - Get data from user form and persist in db
 - Setup example on how to upload picture to server and persist path in db
 - ORM 
-- 
-- 
-- 
+![](img/3tier.jpg)
 
 
 
