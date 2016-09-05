@@ -18,7 +18,7 @@ out.println("Your IP address is " + request.getRemoteAddr());
 ```
 in our jsp pages.  
 For a [good tutorial on JSP click here](http://www.tutorialspoint.com/jsp/index.htm)    
-![Alt text](img/jsp-processing.jpg)
+![Alt text](img/jspprocessing.jpg)
 
 ##Day 3: JDBC
 We will now incorporate a mysql database into our web application. We will look at the different methods that we can use to work with the database to fetch data and to insert data.  
