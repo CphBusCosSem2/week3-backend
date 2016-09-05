@@ -1,4 +1,4 @@
-# ![](img/lotussm.png)  Week 3:  Java Servlets, JSP, JDBC  
+# ![alt text](img/lotussm.png)  Week 3:  Java Servlets, JSP, JDBC  
 3 days of class session and daily exercises  
 2 days of miniproject recapping the learning objectives from the last 3 weeks
 
@@ -6,6 +6,7 @@
 
 ## Day 1 - Java Servlets
 ![alt text](img/clientServer.png "client server image")  
+[Servlet tutorial](http://www.tutorialspoint.com/servlets/)  
 - The architecture (client server with HTTP, POST and GET)
   - Look at dev. tools. i chrome to see what is communicated between client and Server.
 - The anatomy of a java servlet
@@ -33,12 +34,13 @@ Create an application that can register recipes from users
 
 
 ## Day 2 - JSP (Java Server Pages)
-![](img/clientServer.png)
+![alt text](img/jspprocessing.jpg)  
+[JSP tutorial](http://www.tutorialspoint.com/jsp/)  
 - Architecture
   - Page Controller vs. Front Controller
 - Setup a front controller example
   - use `<hidden>` form fields to communicate origin.
-- 
+
 
 
 
@@ -79,7 +81,7 @@ Continue from the exercise the two past days
 
 
 ## CA1 - Fully implemented web application
-[Create a web shop with Cupcakes ](Webshop.pdf)
+[Miniproject here: Create a web shop with Cupcakes ](Webshop.pdf)
 
 - Create a database
 - Add tables like user, invoice, orderline, bottom, topping
