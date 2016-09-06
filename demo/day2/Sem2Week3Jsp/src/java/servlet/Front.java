@@ -2,6 +2,8 @@ package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +16,13 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name="Front", urlPatterns={"/Front"})
 public class Front extends HttpServlet {
-   
+   private static Map<String, String> users = new HashMap();
+   static {
+   users.put("Henning", "hen123");
+   users.put("Rikke", "rik123");
+   users.put("Pede", "ped123");
+   users.put("Frederikke", "fre123");
+   }
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
      * @param request servlet request
@@ -27,7 +35,17 @@ public class Front extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         String username = request.getParameter("username");
-        out.println(username);
+        String password = request.getParameter("password");
+        String origin = request.getParameter("origin");
+        switch(origin){
+            case "register": 
+                response.sendRedirect("feedback.jsp");
+                break;
+            case "login": break;
+            default: break;
+        }
+        
+        //out.println(username+password+origin);
     } 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

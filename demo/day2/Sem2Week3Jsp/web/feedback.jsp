@@ -1,6 +1,6 @@
 <%-- 
-    Document   : newjsp
-    Created on : Sep 6, 2016, 9:11:09 AM
+    Document   : feedback
+    Created on : Sep 6, 2016, 11:02:56 AM
     Author     : Thomas Hartmann - tha@cphbusiness.dk
 --%>
 
@@ -12,9 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <%
-            out.println("Your IP address is " + request.getRemoteAddr());
-        %>
+        <h1>Du er nu registreret i systemet</h1>
+        
     </body>
 </html>
