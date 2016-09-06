@@ -2,6 +2,7 @@ package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import javax.servlet.ServletException;
@@ -37,6 +38,7 @@ public class Front extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String origin = request.getParameter("origin");
+        request.getSession().setAttribute("users", new ArrayList<String>(users.keySet()));
         switch(origin){
             case "register": 
                 response.sendRedirect("feedback.jsp");
@@ -48,6 +50,9 @@ public class Front extends HttpServlet {
                 } else {
                     response.sendRedirect("login.jsp");
                 }
+                break;
+            case "showusers": 
+                response.sendRedirect("showusers.jsp");
                 break;
             default: break;
         }

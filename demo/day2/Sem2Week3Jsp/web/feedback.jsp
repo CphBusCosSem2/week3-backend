@@ -14,11 +14,12 @@
     <body>
         <% if(session.getAttribute("username") == null){
             
-            out.println("<h1>Du er nu registreret i systemet</h1>");
+            //out.println("<h1>Du er nu registreret i systemet</h1>");
             
             %><h1>Du er nu registreret i systemet</h1><%
         }%>
         
-        <% out.println(session.getAttribute("username")); %>
+        Hey <% out.println(session.getAttribute("username")); %> you are logged in
+        See all users in the system <a href="Front?origin=showusers">here</a>
     </body>
 </html>

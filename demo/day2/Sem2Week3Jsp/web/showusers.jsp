@@ -13,14 +13,14 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <p>Vær opmærksom på følgende: br>
+        <p>Vær opmærksom på følgende: <br>
            - linje 6 importerer de klasser der skal bruges (som man gør det i en alm. java klasse<br>
            - The session data with the list in it will only be there if this jsp page comes from the servlet
         </p>
-        <h1>All users from the collection!</h1>
+        <h3>All users from the collection:</h3>
         <% users = (List<String>)session.getAttribute("users");
         for(int i = 0 ; i < users.size(); i++){
-            out.println(users.get(i));
+            out.println(users.get(i)+"<br>");
         }%>
     </body>
 </html>
