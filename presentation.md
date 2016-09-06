@@ -6,7 +6,7 @@
 
 ## Day 1 - Java Servlets
 ![alt text](img/clientServer.png "client server image")  
-[Servlet tutorial](http://www.tutorialspoint.com/servlets/)  
+[Servlet tutorial](http://www.tutorialspoint.com/servlets/)  : read the sections from 'home' to 'http codes'
 - The architecture (client server with HTTP, POST and GET)
   - Look at dev. tools. i chrome to see what is communicated between client and Server.
 - The anatomy of a java servlet
@@ -28,21 +28,64 @@ Create an application that can register recipes from users
 - Create an html form to get ingredients from the users
   - Let the form be dynamic so that the user can get input field for each ingredient
   - Also a text area for the howto of the recipe
-- Collect the data on the server in a data collection (Must be static since HTTP is stateless)
+- Collect the data on the server in a data collection (Must be static since HTTP is stateless) 
+hint:  
+ 
+```javascript  
+
+private static final Map<String, List<String>> recipes;
+    static
+    {
+        List<String> fields = new ArrayList();
+        recipes = new HashMap<String, List<String>>();
+        recipes.put("Boller i karry", fields);
+    }
+```  
+  or better use a Map of recipe objects  
 - Create a toString method to show the content in a formattet way in the console.
 
 
 
 ## Day 2 - JSP (Java Server Pages)
 ![alt text](img/jspprocessing.jpg)  
-[JSP tutorial](http://www.tutorialspoint.com/jsp/)  
+[JSP tutorial](http://www.tutorialspoint.com/jsp/)  : read the sections from 'home' to 'session tracking'  
 - Architecture
   - Page Controller vs. Front Controller
 - Setup a front controller example
   - use `<hidden>` form fields to communicate origin.
+- use Scriplets  `<% code fragment %>` to iterate over a java list:  
+`<%
+out.println("Your IP address is " + request.getRemoteAddr());
+%>`  
 
-
-
+- Jsp declarations:  
+` <%! int i = 0; %> `
+- Jsp expressions:  
+`Today's date: <%= (new java.util.Date()).toLocaleString()%>`
+- Jsp comments:  
+`<%-- This is JSP comment --%>`
+- Jsp directives:  
+`<%@ include ... %>`
+- Jsp objects
+  - request
+  - response
+  - out
+  - session
+- typical java with scriplets:  
+```javascript
+        <%! int day = 3; %> 
+        <html> 
+        <head><title>IF...ELSE Example</title></head> 
+        <body>
+        <% if (day == 1 | day == 7) { %>
+              <p> Today is weekend</p>
+        <% } else { %>
+              <p> Today is not weekend</p>
+        <% } %>
+        </body> 
+        </html> 
+```
+- session tracking
 
 ## Exercise day 2
 Continue from the exercise yesterday.
@@ -54,7 +97,8 @@ Continue from the exercise yesterday.
 
 
 
-## Day 3 - JDBC - connection the application to database
+## Day 3 - JDBC - connection the application to database  
+[JDBC tutorial](http://www.tutorialspoint.com/jdbc/) : read the sections from 'home' to 'Exceptions'
 - Persistence
 - Setup JDBC driver
 - Create working example with database connection
