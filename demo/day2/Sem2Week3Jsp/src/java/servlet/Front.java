@@ -41,7 +41,14 @@ public class Front extends HttpServlet {
             case "register": 
                 response.sendRedirect("feedback.jsp");
                 break;
-            case "login": break;
+            case "login": 
+                if(users.get(username).equals(password)){
+                    request.getSession().setAttribute("username", username);
+                    response.sendRedirect("feedback.jsp");
+                } else {
+                    response.sendRedirect("login.jsp");
+                }
+                break;
             default: break;
         }
         

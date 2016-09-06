@@ -12,7 +12,13 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Du er nu registreret i systemet</h1>
+        <% if(session.getAttribute("username") == null){
+            
+            out.println("<h1>Du er nu registreret i systemet</h1>");
+            
+            %><h1>Du er nu registreret i systemet</h1><%
+        }%>
         
+        <% out.println(session.getAttribute("username")); %>
     </body>
 </html>
