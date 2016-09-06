@@ -26,6 +26,7 @@
 Create an application that can register recipes from users
 
 - Create an html form to get ingredients from the users
+  - create an input field for a name for the recipe (to use in lookup)
   - Let the form be dynamic so that the user can get input field for each ingredient
   - Also a text area for the howto of the recipe
 - Collect the data on the server in a data collection (Must be static since HTTP is stateless) 
@@ -38,7 +39,7 @@ private static final Map<String, List<String>> recipes;
     {
         List<String> fields = new ArrayList();
         recipes = new HashMap<String, List<String>>();
-        recipes.put("Boller i karry", fields);
+        recipes.put(recipeName, fields); //where recipeName is comming from the form.
     }
 ```  
   or better use a Map of recipe objects  
@@ -118,7 +119,7 @@ Continue from the exercise the two past days
 - Store pictures of the dishes in an img folder
 - in db let each recipe have path to the image of the dish
 - read the data from the db to show in jsp pages created earlier
-- if there´s time: create a picture upload button on each recipe
+- if thereÂ´s time: create a picture upload button on each recipe
   - when clicked the user should be able to upload additional images
   - these additional images should be shown too when the recipe is requested.
 
