@@ -1,7 +1,7 @@
+package servlet;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,15 +12,9 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Thomas Hartmann - tha@cphbusiness.dk created on Sep 6, 2016
  */
-@WebServlet(urlPatterns={"/FrontController"})
-public class FrontController extends HttpServlet {
-   private static List<String> strings = new ArrayList();
-   static {
-       strings.add("String1");
-       strings.add("String2");
-       strings.add("String3");
-       strings.add("String4");
-   }
+@WebServlet(name="Front", urlPatterns={"/Front"})
+public class Front extends HttpServlet {
+   
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
      * @param request servlet request
@@ -31,9 +25,9 @@ public class FrontController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        request.getSession().setAttribute("username", "Frederik");
-        request.getSession().setAttribute("theList", strings);
-        response.sendRedirect("index.jsp");
+        PrintWriter out = response.getWriter();
+        String username = request.getParameter("username");
+        out.println(username);
     } 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
