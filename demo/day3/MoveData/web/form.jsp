@@ -12,7 +12,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="Front" method="POST">
+        <!--<form action="Front" method="POST">-->
+        <form action="Persist" method="POST">
             <input type="text" name="username" value="" />
             <input type="text" name="password" value="" />
             <input type="submit" value="Submit" />

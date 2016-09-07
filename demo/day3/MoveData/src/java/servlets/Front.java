@@ -26,9 +26,14 @@ public class Front extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         String username = request.getParameter("username");
+        String password = request.getParameter("password");
         HttpSession session = request.getSession();
+        //set attributes on session
         session.setAttribute("sessionusername", username);
-        response.sendRedirect("result.jsp");
+        //set attributes on request
+        request.setAttribute("password", password);
+        request.getRequestDispatcher("result.jsp").forward(request, response);
+        //response.sendRedirect("result.jsp");
     }
 
 //    @Override

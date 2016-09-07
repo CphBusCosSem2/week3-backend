@@ -12,6 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h3>Du er brugernavn: <% out.println(session.getAttribute("sessionusername"));%></h3>
+        Getting data from the session
+        <h3>You have entered username: <% out.println(session.getAttribute("sessionusername"));%></h3>
+        Getting data from the request object and display with jsp expression syntax
+        <h3>You have entered password : <%= request.getAttribute("password") %></h3>
     </body>
 </html>
