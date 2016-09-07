@@ -98,17 +98,17 @@ Continue from the exercise yesterday.
 
 
 
-## Day 3 - JDBC - connection the application to database  
+## Day 3 - JDBC - connecting the application to database  
 [JDBC tutorial](http://www.tutorialspoint.com/jdbc/) : read the sections from 'home' to 'Exceptions'
 - Persistence
 - Setup JDBC driver
 - Create working example with database connection
 - Move data up and down between java collection and the database
-- Get data from the db to show to user in html table
-- Get data from user form and persist in db
-- Setup example on how to upload picture to server and persist path in db
+- Get data from the db to show to the user in an html table
+- Get data from user form and persist it in the db
+- (Setup example on how to upload picture to server and persist path in db)
 - ORM 
-![](img/3tier.jpg)
+![alt text](img/3tier.jpg)
 
 
 
@@ -119,10 +119,10 @@ Continue from the exercise the two past days
 - Store pictures of the dishes in an img folder
 - in db let each recipe have path to the image of the dish
 - read the data from the db to show in jsp pages created earlier
-- if there´s time: create a picture upload button on each recipe
+- if there is time: create a picture upload button on each recipe
   - when clicked the user should be able to upload additional images
   - these additional images should be shown too when the recipe is requested.
-
+hint: see [tutorial here](http://www.tutorialspoint.com/servlets/servlets-file-uploading.htm)
 
 
 ## CA1 - Fully implemented web application

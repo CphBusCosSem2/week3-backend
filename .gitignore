@@ -28,3 +28,6 @@ presentation.html
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 /demo/day2/Sem2Week3Jsp/nbproject/private/
+/demo/day2/Sem2Week3JDBC/nbproject/private/
+/demo/day3/Sem2Week3FileUpload/target/
+/demo/day2/MoveData/nbproject/private/
