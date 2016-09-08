@@ -3,6 +3,7 @@ package servlets;
 import data.DB;
 import entity.User;
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -44,13 +45,17 @@ public class Persist extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         try {
+            //Form data:
             String username = request.getParameter("username");
             String password = request.getParameter("password");
+            
             String sql = "INSERT INTO login (username, password) VALUES (?, ?)";
-            PreparedStatement pstmt = DB.getConnection().prepareStatement(sql);
+            Connection conn = DB.getConnection();
+            PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, username);
             pstmt.setString(2, password);
             pstmt.executeUpdate();
+            
             request.setAttribute("username", username);
             request.getRequestDispatcher("result.jsp").forward(request, response);
             response.getWriter().print("SUCCESS! the user is added");

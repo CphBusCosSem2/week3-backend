@@ -5,7 +5,7 @@
 --%>
 
 
-<%-- Important to import all referenced classes -->
+<%-- Important to import all referenced classes --%>
 <%@page import="java.util.List, entity.User" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
