@@ -10,10 +10,10 @@ import java.sql.SQLException;
  */
 public class DB {
 
-    private static String driver = "com.mysql.jdbc.Driver";
-    private static String url = "jdbc:mysql://localhost/test";
-    private static String user = "testuser";
-    private static String password = "testuser";
+    private final static String driver = "com.mysql.jdbc.Driver";
+    private final static String url = "jdbc:mysql://localhost/test";
+    private final static String user = "testuser";
+    private final static String password = "testuser";
 
     public static Connection getConnection() {
         Connection conn = null;
